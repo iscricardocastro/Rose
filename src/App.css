@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "tailwindcss";
+.glass {
+  @apply bg-white/70 backdrop-blur-md shadow-lg rounded-2xl border border-white/40;
+}
+.hero-gradient {
+  background: radial-gradient(
+      80% 60% at 20% 10%,
+      #ffe4ea 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    radial-gradient(60% 60% at 90% 10%, #ffc9d6 0%, rgba(255, 255, 255, 0) 60%),
+    linear-gradient(180deg, #fff1f4 0%, #ffffff 100%);
+}
