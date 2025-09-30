@@ -1,7 +1,7 @@
 const items = [
     { title: 'Manicure', desc: 'Cuidado y limpieza de uñas y cutícula.' },
     { title: 'Pedicure Spa', desc: 'Relajación, exfoliación y acabado perfecto.' },
-    { title: 'Gelish', desc: 'Color de larga duración y brillo intenso.' },
+    { title: 'Gel Semipermanente', desc: 'Color de larga duración y brillo intenso.' },
     { title: 'Acrílicas', desc: 'Estructura y diseño (hasta 3.5 hrs).' },
     { title: 'Soft Gel', desc: 'Extensiones ligeras y naturales.' },
 ];

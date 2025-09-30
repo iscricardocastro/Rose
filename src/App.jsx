@@ -20,7 +20,7 @@ export default function App() {
                 ROSE BEAUTY STUDIO
               </h1>
               <p className="mt-3 text-rosebrand-700 md:text-lg">
-                Manicure · Pedicure Spa · Gelish · Acrílicas · Soft Gel
+                Manicure · Pedicure Spa · Gel Semipermanente · Acrílicas · Soft Gel
               </p>
               <p className="mt-4 text-sm md:text-base">
                 Atención en local. A domicilio (San Nicolás y Apodaca) con costo adicional.

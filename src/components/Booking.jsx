@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import { generateSlots, sundaySlots } from '../hooks/useSlots'
 
-const SERVICES = ['Manicure', 'Pedicure Spa', 'Gelish', 'Acrílicas', 'Soft Gel']
+const SERVICES = ['Manicure', 'Pedicure Spa', 'Gel Semipermanente', 'Acrílicas', 'Soft Gel']
 const PHONE = '528128706467'
 const enc = encodeURIComponent
 
