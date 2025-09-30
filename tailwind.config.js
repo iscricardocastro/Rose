@@ -1,8 +1,12 @@
-/** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
+    container: { center: true, padding: '1rem', screens: { lg: '1024px', xl: '1120px' } },
     extend: {
+      fontFamily: {
+        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        display: ['Playfair Display', 'serif'],
+      },
       colors: {
         rosebrand: {
           50: '#fff1f4',
@@ -16,8 +20,13 @@ export default {
           800: '#861943',
           900: '#6e1738'
         }
+      },
+      boxShadow: {
+        soft: '0 10px 30px rgba(240,70,122,0.08)',
+        glass: '0 8px 24px rgba(16,24,40,0.06)'
       }
-    },
+    }
   },
   plugins: [],
 }
+

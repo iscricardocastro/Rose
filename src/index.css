@@ -1,17 +1,78 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import "tailwindcss";
-.glass {
-  @apply bg-white/70 backdrop-blur-md shadow-lg rounded-2xl border border-white/40;
+
+/* === Tema (Tailwind v4) === */
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+
+  --color-rosebrand-50: #fff1f4;
+  --color-rosebrand-100: #ffe4ea;
+  --color-rosebrand-200: #ffc9d6;
+  --color-rosebrand-300: #ff9fb6;
+  --color-rosebrand-400: #ff6e93;
+  --color-rosebrand-500: #f2447a;
+  --color-rosebrand-600: #d12967;
+  --color-rosebrand-700: #aa1c53;
+  --color-rosebrand-800: #861943;
+  --color-rosebrand-900: #6e1738;
 }
+
+/* === Componentes: NO @apply a .btn dentro de otra clase === */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold transition;
+  }
+  .btn-primary {
+    /* en lugar de "@apply btn ..." repetimos las utilities base */
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold transition;
+    @apply bg-rosebrand-600 text-white hover:bg-rosebrand-700 shadow;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold transition;
+    @apply border border-rosebrand-200 bg-white hover:bg-rosebrand-50;
+  }
+  .section {
+    @apply container mx-auto my-10 md:my-16 px-4;
+  }
+  .title {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight;
+  }
+  .glass {
+    @apply bg-white/75 backdrop-blur-md border border-white/50 rounded-2xl shadow;
+  }
+}
+
+/* Fondo del hero */
 .hero-gradient {
   background: radial-gradient(
-      80% 60% at 20% 10%,
+      1200px 500px at 10% 0%,
       #ffe4ea 0%,
-      rgba(255, 255, 255, 0) 60%
+      rgba(255, 255, 255, 0) 70%
     ),
-    radial-gradient(60% 60% at 90% 10%, #ffc9d6 0%, rgba(255, 255, 255, 0) 60%),
+    radial-gradient(
+      900px 400px at 90% 0%,
+      #ffc9d6 0%,
+      rgba(255, 255, 255, 0) 70%
+    ),
     linear-gradient(180deg, #fff1f4 0%, #ffffff 100%);
+}
+
+@layer components {
+  .nav-link {
+    @apply text-rosebrand-700 hover:text-rosebrand-900 transition;
+    position: relative;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: theme("colors.rosebrand.600");
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
 }

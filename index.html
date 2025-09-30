@@ -3,10 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>ROSE BEAUTY STUDIO</title>
+    <title>ROSE BEAUTY STUDIO | Manicure & Pedicure en San Nicolás</title>
     <meta
       name="description"
-      content="ROSE BEAUTY STUDIO — Manicure, pedicure spa, gelish, acrílicas, soft gel en San Nicolás y Apodaca."
+      content="Manicure, Pedicure Spa, Gelish, Acrílicas y Soft Gel en local. Citas por WhatsApp. San Nicolás y Apodaca."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ROSE BEAUTY STUDIO" />
+    <meta
+      property="og:description"
+      content="Manicure · Pedicure Spa · Gelish · Acrílicas · Soft Gel"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tudominio.vercel.app/" />
+    <meta property="og:image" content="/og-cover.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ROSE BEAUTY STUDIO" />
+    <meta
+      name="twitter:description"
+      content="Manicure · Pedicure Spa · Gelish · Acrílicas · Soft Gel"
+    />
+    <meta name="twitter:image" content="/og-cover.jpg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
     />
     <link href="./src/index.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" />
@@ -15,4 +42,35 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "ROSE BEAUTY STUDIO",
+      "image": "/og-cover.jpg",
+      "telephone": "+52 81 2870 6467",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Nicolás de los Garza",
+        "addressRegion": "NL",
+        "addressCountry": "MX"
+      },
+      "areaServed": ["San Nicolás", "Apodaca"],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "07:00",
+          "closes": "17:00"
+        }
+      ],
+      "sameAs": ["https://wa.me/528128706467"]
+    }
+  </script>
 </html>
