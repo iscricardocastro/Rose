@@ -76,3 +76,14 @@
     width: 100%;
   }
 }
+.hero-gradient {
+  background: radial-gradient(
+      circle at 50% 20%,
+      #ffe4ea 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    linear-gradient(180deg, #fff1f4 0%, #ffffff 100%);
+}
+body {
+  background: radial-gradient(circle at 50% 10%, #ffc9d6 0%, #fff1f4 70%);
+}

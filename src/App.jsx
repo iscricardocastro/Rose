@@ -7,6 +7,7 @@ import Policies from './components/Policies.jsx'
 import Footer from './components/Footer.jsx'
 import WhatsappFab from './components/WhatsappFab.jsx'
 import './index.css';
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -40,6 +41,8 @@ export default function App() {
       </main>
       <Footer />
       <WhatsappFab />
+      <Analytics />
+
     </div>
   )
 }
